@@ -1,0 +1,61 @@
+#forgetPassword,#updateProfile{
+	display: none;	
+}
+
+#fplock,p{
+    text-align:center;
+}
+.modal{
+  display:none;
+  position: absolute;
+  z-index:1;
+  left: 0;
+  top:0;
+  height: 100%;
+  width:100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content{
+  background-color:#f4f4f4;
+  margin-top:50px;
+  margin-left:5%;
+  width:90%;
+  height:auto;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+  animation-name:modalopen;
+  animation-duration:1s;
+}
+
+.modal-header h4{
+  margin:0;
+}
+
+.modal-header{
+  background:#7EB3CD;
+  text-align:justify;
+  color:#fff;
+}
+
+.modal-body{
+  padding:10px 20px;
+}
+
+#closeBtn{
+  color:#ccc;
+  float: right;
+  font-size:30px;
+  color:#fff;
+}
+
+#closeBtn:hover,#closeBtn:focus{
+  color:#000;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+@keyframes modalopen{
+  from{ opacity: 0}
+  to {opacity: 1}
+}

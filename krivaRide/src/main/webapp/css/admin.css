@@ -1,0 +1,47 @@
+
+.container{
+	margin-top: 5%;
+}
+
+.navbar .navbar-brand {
+    color: white;
+    padding-left: 0;
+    padding-right: 50px;
+    font-family: 'Merienda One', sans-serif;
+}
+
+.navbar .navbar-brand i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.navbar-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu a {
+    color: black;
+    text-align: left;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover{
+    color: black;
+    text-align: left;
+    text-decoration: none;
+}
+
+a.dropdown-toggle{
+	color: white;
+    text-align: left;
+    text-decoration: none;
+}
+
+.card{
+	height:175px;
+}
+
+#viewTable{
+	
+}
