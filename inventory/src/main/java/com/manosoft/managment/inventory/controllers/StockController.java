@@ -10,31 +10,31 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.manosoft.managment.inventory.entites.Product;
-import com.manosoft.managment.inventory.repository.ProductRepository;
+import com.manosoft.managment.inventory.entites.Stock;
+import com.manosoft.managment.inventory.repository.StockRepository;
+
 
 @RestController
-@RequestMapping("/api/products")
-public class ProductController {
-	
+@RequestMapping("/api/stocks")
+public class StockController {
+
 	@Autowired
-	ProductRepository productRepo;
+	StockRepository StockRepo;
 	
 	@GetMapping("/")
-	public List<Product> getProductList(){
-		return null;
+	public List<Stock> getStockList(){
+		return StockRepo.findAll();
 	}
 	
-	@GetMapping("/product/{id}")
-	public Product getProduct(@PathVariable String productId) {
-		return null;
+	@GetMapping("/Stock/{id}")
+	public Stock getStock(@PathVariable String stockId) {
+		return StockRepo.getOne(Long.parseLong(stockId));
 		
 	}
 	
 	@PostMapping("/")
-	public Product addNewProduct(@RequestBody Product productObj) {
-		return null;
+	public Stock addNewStock(@RequestBody Stock stockObj) {
+		return StockRepo.save(stockObj);
 		
 	}
-
 }

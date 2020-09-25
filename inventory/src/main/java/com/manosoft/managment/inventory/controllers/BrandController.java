@@ -10,30 +10,31 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.manosoft.managment.inventory.entites.Product;
-import com.manosoft.managment.inventory.repository.ProductRepository;
+import com.manosoft.managment.inventory.entites.Brand;
+import com.manosoft.managment.inventory.repository.BrandRepository;
+
 
 @RestController
-@RequestMapping("/api/products")
-public class ProductController {
+@RequestMapping("/api/brands")
+public class BrandController {
 	
 	@Autowired
-	ProductRepository productRepo;
+	BrandRepository brandRepo;
 	
 	@GetMapping("/")
-	public List<Product> getProductList(){
-		return null;
+	public List<Brand> getbrandList(){
+		return brandRepo.findAll();
 	}
 	
-	@GetMapping("/product/{id}")
-	public Product getProduct(@PathVariable String productId) {
-		return null;
+	@GetMapping("/brand/{id}")
+	public Brand getbrand(@PathVariable String brandId) {
+		return brandRepo.getOne(Long.parseLong(brandId));
 		
 	}
 	
 	@PostMapping("/")
-	public Product addNewProduct(@RequestBody Product productObj) {
-		return null;
+	public Brand addNewbrand(@RequestBody Brand brandObj) {
+		return brandRepo.save(brandObj);
 		
 	}
 
